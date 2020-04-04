@@ -1,0 +1,17 @@
+class Solution:
+    def moveZeroes(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        readPtr = 0
+        writePtr = 0
+        for i,val in enumerate(nums):
+            if val == 0:
+                readPtr += 1
+            else:
+                nums[writePtr]= nums[i]
+                writePtr += 1
+                readPtr += 1
+        for j in range(writePtr,len(nums)):
+            nums[j] = 0
+                
