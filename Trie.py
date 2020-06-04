@@ -4,26 +4,26 @@ class Trie:
         """
         Initialize your data structure here.
         """
-        self.mydict = {}
+        self.myset = set()
 
     def insert(self, word: str) -> None:
         """
         Inserts a word into the trie.
         """
-        self.mydict[word] = 1
+        self.myset.add(word)
 
     def search(self, word: str) -> bool:
         """
         Returns if the word is in the trie.
         """
-        return word in self.mydict.keys()
+        return word in self.myset
 
     def startsWith(self, prefix: str) -> bool:
         """
         Returns if there is any word in the trie that starts with the given prefix.
         """
-        for key in self.mydict.keys():
-            if key.startswith(prefix):
+        for val in self.myset:
+            if val.startswith(prefix):
                 return True
         return False
 
