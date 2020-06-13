@@ -12,7 +12,7 @@ class RandomizedSet:
         """
         Inserts a value to the set. Returns true if the set did not already contain the specified element.
         """
-        #Checking if val in dictionary:
+        print(val)
         if val not in self.mydict:
             self.mydict[val] = 1
             return True
