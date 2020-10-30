@@ -42,3 +42,7 @@ class Solution:
           print_tree(child,space*2)
 
     print_tree(root,1)
+
+
+
+#Solution.findHierarchy([["Computers","Apple"],["Apple","iMac"],["Computers","Acer"],["Acer","Aspire"],["Computers","HP"],["HP","Pavilion"]])
